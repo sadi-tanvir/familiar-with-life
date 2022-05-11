@@ -11,8 +11,8 @@ const Header = () => {
           {/* </div> */}
         <div className="flex text-white font-bold ml-auto">
           <CustomLink to="/">HOME</CustomLink>
-          <CustomLink to="/reviews">REVIEWS</CustomLink>
-          <CustomLink to="/dashboard">DASHBOARD</CustomLink>
+          <CustomLink to="/reviews">SERVICES</CustomLink>
+          <CustomLink to="/dashboard">CHECKOUT</CustomLink>
           <CustomLink to="/blogs">BLOGS</CustomLink>
           <CustomLink to="/about">ABOUT</CustomLink>
         </div>
