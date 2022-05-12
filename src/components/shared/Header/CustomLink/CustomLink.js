@@ -11,11 +11,10 @@ function CustomLink({ children, to, ...props }) {
       backgroundColor: match ? '#ef4444' : "white",
       borderRadius: 30,
       textDecoration: 'none',
-      paddingLeft: 14,
-      paddingRight: 14,
-      paddingBottom: 5,
-      paddingTop: 5,
-      marginLeft: 15,
+      // paddingLeft: 14,
+      // paddingRight: 14,
+      // paddingBottom: 5,
+      // paddingTop: 5,
       border: match ? '3px solid #ef4444' : ''
     }
   
