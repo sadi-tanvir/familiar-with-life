@@ -1,14 +1,14 @@
 import React from "react";
 import CustomLink from "./CustomLink/CustomLink";
 import logo from "../../../images/logo.png"
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate()
   return (
     <header className="w-full h-16 flex justify-center items-center mt-2">
       <nav className="w-11/12 flex justify-around items-center">
-          {/* <div> */}
-              <img className="w-28 md:w-40" src={logo} alt="logo" />
-          {/* </div> */}
+              <img onClick={() => navigate('/')} className="w-28 md:w-40 cursor-pointer" src={logo} alt="logo" />
         <div className="flex text-white font-bold ml-auto">
           <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/">HOME</CustomLink>
           <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/services">SERVICES</CustomLink>

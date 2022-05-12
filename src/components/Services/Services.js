@@ -9,7 +9,7 @@ const Services = () => {
         <h1 className="text-5xl font-bold text-red-500 mb-5 ">My Services</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 flex flex-col justify-center items-center px-2">
           {serviceData.map((data) => (
-            <Service data={data} />
+            <Service key={data.id} data={data} />
           ))}
         </div>
       </div>
