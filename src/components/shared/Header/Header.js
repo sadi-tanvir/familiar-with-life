@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex text-white font-bold ml-auto">
           <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/">HOME</CustomLink>
           <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/services">SERVICES</CustomLink>
-          <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/checkout">CHECKOUT</CustomLink>
+          <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/checkout/:id">CHECKOUT</CustomLink>
           <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/blogs">BLOGS</CustomLink>
           <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/about">ABOUT</CustomLink>
         </div>
