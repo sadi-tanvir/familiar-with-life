@@ -15,6 +15,11 @@ const Header = () => {
           <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/checkout/:id">CHECKOUT</CustomLink>
           <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/blogs">BLOGS</CustomLink>
           <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/about">ABOUT</CustomLink>
+          <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/login">LOGIN</CustomLink>
+          <CustomLink className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg" to="/register">REGISTER</CustomLink>
+          <button className="px-3 py-2 -mt-1 ml-2 bg-slate-600 shadow-md text-white font-bold rounded-md uppercase">
+            Logout
+          </button>
         </div>
       </nav>
     </header>
