@@ -1,8 +1,11 @@
-# project setup steps
+## Familiar with life
+## website link [GO]()
 
-### 1- create a new firebase project in console.google.com.
-### 2- npm install firebase / yarn add firebase
-### 3- create firebase.init.js and import getAuth to export auth
-### 4- firebase setting > Authentication > enable email and password auth
-### 5- yarn add react-firebase-hooks
-### 6- 
+
+
+## Features of project
+### 1- you can log in with email and password 
+### 2- and you can also log in with a google account
+### 2- if you forgot your password you could recover it very easily.
+### 2- Nested route is include in this project
+### 5- router authentication included for protected routes.

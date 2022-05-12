@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import ModalBody from "../../re-usable-components/Modal";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
@@ -15,7 +15,8 @@ const Login = () => {
 
   // rotes
   const navigate = useNavigate();
-
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   // modal
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
@@ -35,9 +36,10 @@ const Login = () => {
     e.preventDefault();
     const { email, password } = info;
     signInWithEmailAndPassword(email, password);
+
     // success alert
     Swal.fire({
-      title: "Register Successfull.",
+      title: error || "Register Successfull.",
       showClass: {
         popup: "animate__animated animate__fadeInDown",
       },
@@ -46,7 +48,7 @@ const Login = () => {
       },
     }).then((res) => {
       if (res) {
-        navigate("/");
+        navigate(from, { replace: true });
       }
     });
   };
