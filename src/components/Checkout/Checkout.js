@@ -11,7 +11,7 @@ const Checkout = () => {
     
     return (
         <div className={`w-full min-h-screen flex justify-center items-center ${appointmentCategory ? 'my-5':'-mt-20'}`}>
-            <div className="w-8/12 shadow">
+            <div className="w-11/12 md:w-8/12 shadow">
                 {!appointmentCategory && <h1 className="font-bold text-slate-600 text-center uppercase pt-5">You Don't Have Any Appointment</h1>}
                 <div className="px-6 py-5 shadow">
                     {appointmentCategory?.img && <img className="rounded-lg h-3/6 w-full shadow-md" src={appointmentCategory?.img} alt="" />}

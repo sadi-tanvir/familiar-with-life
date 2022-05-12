@@ -7,6 +7,7 @@ import Checkout from "./components/Checkout/Checkout";
 import Home from "./components/Home/Home";
 import Login from "./components/Login-User/Login/Login";
 import Register from "./components/Login-User/Register/Register";
+import RequireAuth from "./components/Login-User/RequireAuth/RequireAuth";
 import Services from "./components/Services/Services";
 import Footer from "./components/shared/Footer/Footer";
 import Header from "./components/shared/Header/Header";
@@ -18,8 +19,14 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/checkout/:appointId" element={<Checkout />} />
+        <Route
+          path="/checkout/:appointId"
+          element={
+            <RequireAuth>
+              <Checkout />
+            </RequireAuth>
+          }
+        />
         <Route path="/blogs" element={<QuestionAndAnswer />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />

@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     return (
         <div className="w-full min-h-screen flex justify-center items-center -mt-20">
-            <div className="w-8/12 shadow-2xl flex">
+            <div className="w-11/12 md:w-7/12 shadow-2xl flex">
                 <div className="ml-3 w-full py-4 pr-3">
                     <h1 className="text-4xl font-bold">About myself</h1>
                     <hr />
