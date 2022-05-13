@@ -1,7 +1,6 @@
-import axios from 'axios';
-import React, { useEffect } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import check from "../../images/banner/service-1.jpg"
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useNavigate, useParams } from 'react-router-dom';
 import {serviceData} from "../Services/serviceData"
 
 const Checkout = () => {
@@ -10,6 +9,10 @@ const Checkout = () => {
     const appointmentCategory = serviceData.find(data => data.id == appointId)
     
     return (
+        <>
+        <Helmet>
+            <title>Checkout - Familiar With Life</title>
+        </Helmet>
         <div className={`w-full min-h-screen flex justify-center items-center ${appointmentCategory ? 'my-5':'-mt-20'}`}>
             <div className="w-11/12 md:w-8/12 shadow">
                 {!appointmentCategory && <h1 className="font-bold text-slate-600 text-center uppercase pt-5">You Don't Have Any Appointment</h1>}
@@ -31,6 +34,7 @@ const Checkout = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

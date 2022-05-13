@@ -5,6 +5,7 @@ import ModalBody from "../../re-usable-components/Modal";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   // state
@@ -54,6 +55,10 @@ const Login = () => {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>Login - Familiar With Life</title>
+    </Helmet>
     <div className="w-full min-h-screen flex justify-center items-center">
       <div className="w-4/12 shadow py-3 px-5">
         <h1 className="font-bold my-4 text-red-600 text-center">Login</h1>
@@ -98,6 +103,7 @@ const Login = () => {
         <ModalBody show={show} setShow={setShow} />
       </div>
     </div>
+    </>
   );
 };
 

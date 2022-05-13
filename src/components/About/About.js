@@ -1,7 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
     return (
+        <>
+        <Helmet>
+            <title>About - Familiar With Life</title>
+        </Helmet>
         <div className="w-full min-h-screen flex justify-center items-center -mt-20">
             <div className="w-11/12 md:w-7/12 shadow-2xl flex">
                 <div className="ml-3 w-full py-4 pr-3">
@@ -15,6 +20,7 @@ const About = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

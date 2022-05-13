@@ -4,6 +4,7 @@ import SocialLogin from "../SocialLogin/SocialLogin";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   // state
@@ -47,6 +48,10 @@ const Register = () => {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>Register - Familiar With Life</title>
+    </Helmet>
     <div className="w-full min-h-screen flex justify-center items-center">
       <div className="w-4/12 shadow py-3 px-5">
         <h1 className="font-bold my-4 text-red-600 text-center">Register</h1>
@@ -84,6 +89,7 @@ const Register = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 
