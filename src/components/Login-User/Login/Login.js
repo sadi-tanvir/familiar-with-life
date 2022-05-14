@@ -6,6 +6,7 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import ReactHelmet from "../../shared/Helmet/ReactHelmet";
 
 const Login = () => {
   // state
@@ -32,33 +33,21 @@ const Login = () => {
     setInfo({ ...info, [name]: value });
   };
 
+  if (user) {
+    navigate(from, { replace: true });
+  }
+
   // handle submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { email, password } = info;
-    signInWithEmailAndPassword(email, password);
-
-    // success alert
-    Swal.fire({
-      title: error || "Register Successfull.",
-      showClass: {
-        popup: "animate__animated animate__fadeInDown",
-      },
-      hideClass: {
-        popup: "animate__animated animate__fadeOutUp",
-      },
-    }).then((res) => {
-      if (res) {
-        navigate(from, { replace: true });
-      }
-    });
+    await signInWithEmailAndPassword(email, password);
   };
 
   return (
     <>
-    <Helmet>
-      <title>Login - Familiar With Life</title>
-    </Helmet>
+    <ReactHelmet title="Login" />
+
     <div className="w-full min-h-screen flex justify-center items-center">
       <div className="w-4/12 shadow py-3 px-5">
         <h1 className="font-bold my-4 text-red-600 text-center">Login</h1>

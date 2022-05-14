@@ -1,11 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const ReactHelmet = ({page}) => {
+const ReactHelmet = ({title}) => {
   return (
     <>
       <Helmet>
-        <title>{page} - Familiar With Life</title>
+        <title>{title} - Familiar With Life</title>
       </Helmet>
     </>
   );

@@ -1,14 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import ReactHelmet from "../shared/Helmet/ReactHelmet";
 import Service from "./Service";
 import { serviceData } from "./serviceData";
 
 const Services = () => {
   return (
     <>
-      <Helmet>
-        <title>Service - Familiar With Life</title>
-      </Helmet>
+      <ReactHelmet title="Services" />
 
       <div className="flex flex-col justify-center items-center px-2 my-20">
         <h1 className="text-5xl font-bold text-red-500 mb-5 ">My Services</h1>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom';
 import {serviceData} from "../Services/serviceData"
+import ReactHelmet from '../shared/Helmet/ReactHelmet';
 
 const Checkout = () => {
     const {appointId} = useParams()
@@ -10,9 +11,8 @@ const Checkout = () => {
     
     return (
         <>
-        <Helmet>
-            <title>Checkout - Familiar With Life</title>
-        </Helmet>
+        <ReactHelmet title="Checkout" />
+        
         <div className={`w-full min-h-screen flex justify-center items-center ${appointmentCategory ? 'my-5':'-mt-20'}`}>
             <div className="w-11/12 md:w-8/12 shadow">
                 {!appointmentCategory && <h1 className="font-bold text-slate-600 text-center uppercase pt-5">You Don't Have Any Appointment</h1>}

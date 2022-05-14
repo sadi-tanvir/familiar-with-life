@@ -1,15 +1,15 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import ReactHelmet from "../shared/Helmet/ReactHelmet";
 import FAQFormat from "./FAQFormat"
 import {data} from "./Question"
 
-const QuestionAndAnswer = () => {
+const Blogs = () => {
   
   return (
     <>
-      <Helmet>
-        <title>Blogs - Familiar With Life</title>
-      </Helmet>
+      <ReactHelmet title="Blogs" />
+
       <div className="accordion my-5 min-h-screen px-3 md:px-24" id="accordionExample">
           <h1 className="text-center text-red-500 fw-bold my-5 text-5xl">My Blogs</h1>
           {
@@ -20,4 +20,4 @@ const QuestionAndAnswer = () => {
   );
 };
 
-export default QuestionAndAnswer;
+export default Blogs;
