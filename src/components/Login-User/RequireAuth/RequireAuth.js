@@ -14,10 +14,13 @@ const RequireAuth = ({ children }) => {
   if (loading) {
     return;
   }
+  
+  // if user not loged in
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
+  // if email not verified
   if(user.providerData[0].providerId === 'password' && !user.emailVerified){
     return <NotVerified sendEmailVerification={sendEmailVerification} />
   }
