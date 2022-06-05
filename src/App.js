@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Error404 from "./components/404/Error404";
 import About from "./components/About/About";
-import QuestionAndAnswer from "./components/Blog/Blogs";
 import Checkout from "./components/Checkout/Checkout";
 import Home from "./components/Home/Home";
 import Login from "./components/Login-User/Login/Login";
@@ -27,7 +26,6 @@ const App = () => {
             </RequireAuth>
           }
         />
-        <Route path="/blogs" element={<QuestionAndAnswer />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

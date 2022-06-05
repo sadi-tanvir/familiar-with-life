@@ -42,12 +42,6 @@ const Header = () => {
           </CustomLink>
           <CustomLink
             className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg"
-            to="/blogs"
-          >
-            BLOGS
-          </CustomLink>
-          <CustomLink
-            className="ml-0 md:ml-3 px-2 px-md-3 py-1 text-xs md:text-lg"
             to="/about"
           >
             ABOUT
